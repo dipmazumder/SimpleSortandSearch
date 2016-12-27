@@ -7,3 +7,6 @@ c:\algos\Sort and Search\Sort and Search\obj\Debug\Sort and Search.pdb
 C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\bin\Debug\Sort and Search.exe.config
 C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\obj\Debug\Sort and Search.exe
 C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\obj\Debug\Sort and Search.pdb
+C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\bin\Debug\Sort and Search.exe
+C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\bin\Debug\Sort and Search.pdb
+C:\algos\Simple Sort and Search\SimpleSortandSearch\Sort and Search\obj\Debug\Sort and Search.csprojResolveAssemblyReference.cache

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearch.cs" />
     <Compile Include="bubblesort.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="insertionsort.cs" />

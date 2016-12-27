@@ -86,6 +86,19 @@ namespace Sort_and_Search
             Console.WriteLine("");
             Console.WriteLine("");
 
+
+
+            Console.WriteLine("BINARY SEARCH- O(LogN)");
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            int numbertosearch = 9;
+            var value = BinarySearch.binarysearch(orglist, numbertosearch);           
+            watch.Stop();
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine(value);
+            Console.WriteLine("");
+            Console.WriteLine("Time Taken : " + elapsedMs);
+            Console.WriteLine("");
+            Console.WriteLine("");
             Console.Read();
         }
     }
