@@ -11,93 +11,69 @@ namespace Sort_and_Search
             Helper.printList(orglist);            
             Console.WriteLine("");
             Console.WriteLine("");
-
+            
+            //SELECTION SORT
             Console.WriteLine("SELECTION SORT - O(N^2)");
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-            SelectSort.selectionsort(orglist);//selection sort
-            System.Threading.Thread.Sleep(500);
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
+            Timer.startwatch();
+            SelectSort.selectionsort(orglist);
+            Timer.stopwatch();          
+            Helper.printList(orglist);           
+            Console.WriteLine("");
+
+            //BUBBLE SORT
+            Console.WriteLine("BUBBLE SORT - O(N^2)");
+            Timer.startwatch();
+            bubblesrt.bubblesort(orglist);
+            Timer.stopwatch();            
             Helper.printList(orglist);
             Console.WriteLine("");
-            Console.WriteLine("Time Taken : "+ elapsedMs);
-            Console.WriteLine("");
-            Console.WriteLine("");
 
-             Console.WriteLine("BUBBLE SORT - O(N^2)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            bubblesrt.bubblesort(orglist);//bubble sort
-            
-            System.Threading.Thread.Sleep(500);
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
-            Helper.printList(orglist);
-            Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
-             Console.WriteLine("");
-
-
+            //INSERTION SORT
             Console.WriteLine("INSERTION SORT - O(N^2)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            insertsrt.insertionsort(orglist);//insrtion sort
-            
-            System.Threading.Thread.Sleep(500);
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
+            Timer.startwatch();
+            insertsrt.insertionsort(orglist);
+            Timer.stopwatch();           
             Helper.printList(orglist);
             Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
-            Console.WriteLine("");
-            
-             Console.WriteLine("SHELL SORT - O(N^2)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            shellsrt.shellsort(orglist);//shell sort
-            
-            System.Threading.Thread.Sleep(500);
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
+
+            //SHELL SORT
+            Console.WriteLine("SHELL SORT - O(N^2)");
+            Timer.startwatch();
+            shellsrt.shellsort(orglist);
+            Timer.stopwatch();
             Helper.printList(orglist);
             Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
-            Console.WriteLine("");
-            
-             Console.WriteLine("MERGE SORT - O(NLogN)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
+
+            //MERGE SORT
+            Console.WriteLine("MERGE SORT - O(NLogN)");
+            Timer.startwatch();
             mergesrt.mergesort(orglist);
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
+            Timer.stopwatch();
             Helper.printList(orglist);
             Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
-            Console.WriteLine("");
-            
+                        
+            //QUICK SORT
             Console.WriteLine("QUICK SORT- O(NLogN)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
+            Timer.startwatch();
             quicksrt.quicksort(orglist, 0, orglist.Length - 1);
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
+            Timer.stopwatch();
             Helper.printList(orglist);
             Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
-            Console.WriteLine("");
 
-
-
+            //BINARY SEARCH
             Console.WriteLine("BINARY SEARCH- O(LogN)");
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            int numbertosearch = 9;
-            var value = BinarySearch.binarysearch(orglist, numbertosearch);           
-            watch.Stop();
-            elapsedMs = watch.ElapsedMilliseconds;
-            Console.WriteLine(value);
-            Console.WriteLine("");
-            Console.WriteLine("Time Taken : " + elapsedMs);
-            Console.WriteLine("");
+            Console.Write("Please Enter a value to search :");
+            int number_to_search = Convert.ToInt32(Console.ReadLine());
+            Timer.startwatch();
+            var value = BinarySearch.binarysearch(orglist, number_to_search);
+            Timer.stopwatch();
+            if (value != -1)
+            {
+                Console.WriteLine("Value found at position: " + value);
+            }
+            else {
+                Console.WriteLine("Value Not Found.");
+            }           
             Console.WriteLine("");
             Console.Read();
         }
