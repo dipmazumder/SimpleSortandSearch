@@ -65,7 +65,7 @@ namespace Sort_and_Search
             Console.Write("Please Enter a value to search :");
             int number_to_search = Convert.ToInt32(Console.ReadLine());
             Timer.startwatch();
-            var value = BinarySearch.binarysearch(orglist, number_to_search);
+            var value = BinarySearch.binarysearch(orglist, number_to_search,0, orglist.Length);
             Timer.stopwatch();
             if (value != -1)
             {

@@ -2,27 +2,22 @@
 {
     class BinarySearch
     {
-        public static int binarysearch(int[] orglist, int number)
+        public static int binarysearch(int[] orglist, int number, int min, int max)
         {
-            int min = 0;
-            int max = orglist.Length - 1;
-            while (min <= max)
-            {
-                int mid = (min + (max - min) / 2);
-                if (orglist[mid] == number)
-                {
-                    return mid;
-                }
-                if (orglist[mid] > number)
-                {
-                    max = mid - 1;
-                }
-                else
-                {
-                    min = mid + 1;
-                }
+            if (min >= max) {
+                return -1;
             }
-            return -1;
+            int midpoint = min + (max - min) / 2;
+            if (orglist[midpoint] == number) {
+                return midpoint;
+            }
+            if (orglist[midpoint] > number)
+            {
+                return binarysearch(orglist, number, min, midpoint - 1);
+            }
+            else {
+                return binarysearch(orglist, number, midpoint+1, max);
+            }        
         }
     }
 }
